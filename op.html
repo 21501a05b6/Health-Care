@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famous Doctors Appointment Booking</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            background-image: url('images/images.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .doctor-list,
+        .appointment-form {
+            flex: 1;
+            text-align: center;
+            margin: 5px;
+        }
+        .appointment-form {
+            border: 1px solid #000; /* Add a border to the appointment form */
+            padding: 5px; /* Add some padding for spacing */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <center><h1>Further contact</h1></center>
+    </header>
+
+    <div class="container">
+        <section class="doctor-list">
+            <div class="doctor-card">
+                <h2>Dr. John Smith</h2>
+                <p>Specialty: Cardiologist,Experience:8 years</p>
+                <button class="book-appointment" data-doctor="Dr. John Smith">Book Appointment</button>
+            </div>
+            <div class="doctor-card">
+                <h2>Dr. Harika</h2>
+                <p>Specialty: Ophthalmologist,Experience:5 years</p>
+                <button class="book-appointment" data-doctor="Dr. Harika">Book Appointment</button>
+            </div>
+            <div class="doctor-card">
+                <h2>Dr. Kishore</h2>
+                <p>Specialty: Orthopedic Surgeon,Experience:6 years</p>
+                <button class="book-appointment" data-doctor="Dr. Kishore">Book Appointment</button>
+            </div>
+            <div class="doctor-card">
+                <h2>Dr. Anil</h2>
+                <p>Specialty: Neurologist,Experience:3 years</p>
+                <button class="book-appointment" data-doctor="Dr. Anil">Book Appointment</button>
+            </div>
+            <div class="doctor-card">
+                <h2>Dr. Indira</h2>
+                <p>Specialty: Gynaecologist,Experiencce:5 years</p>
+                <button class="book-appointment" data-doctor="Dr. Indira">Book Appointment</button>
+            </div>
+            <div class="doctor-card">
+                <h2>Dr.Prasad</h2>
+                <p>Specialty: Dentist,Experiencce:10 years</p>
+                <button class="book-appointment" data-doctor="Dr.Prasad">Book Appointment</button>
+            </div>
+        </section>
+   
+        <section class="appointment-form">
+            <h2>Book an Appointment</h2>
+            <form action="/submit-appointment" method="post">
+                <label for="name">Your Name:</label>
+                <p><input type="text" id="name" name="name" required></p>
+        
+                <label for="age">Age:</label>
+                <p><input type="number" id="age" name="age" required></p>
+        
+                <label for="doctor">Selected Doctor:</label>
+                <p><input type="text" id="selected-doctor" name="selectedDoctor" readonly required></p>
+        
+                <label for="date">Preferred Date:</label>
+                <p><input type="date" id="date" name="appointmentDate" required></p>
+        
+                <button type="submit" id="submit-appointment">Submit</button>
+            </form>
+        </section>
+        
+    </div>
+   
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const selectedDoctorField = document.getElementById("selected-doctor");
+        
+            const bookAppointmentButtons = document.querySelectorAll(".book-appointment");
+        
+            bookAppointmentButtons.forEach(button => {
+                button.addEventListener("click", function () {
+                    const selectedDoctor = button.getAttribute("data-doctor");
+                    selectedDoctorField.value = selectedDoctor;
+                });
+            });
+			const dateInput = document.getElementById("date");
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.setAttribute('min', today);
+        });
+        
+    </script>
+</body>
+</html>

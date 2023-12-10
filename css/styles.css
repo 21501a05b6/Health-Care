@@ -1,0 +1,155 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0.9rem 5%;
+    
+    background-color: #f4f4f4;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+}
+
+main {
+    padding: 5%;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+#services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between the blocks */
+}
+
+.service {
+    height: 200px; /* Adjust as needed */
+    flex: 1 0 calc(33.333% - 20px); /* Adjust the width of the blocks */
+    /* background-color: #e9ecef; */
+    padding: 50px 20px; /* Adjust the padding inside the blocks */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    color: white; /* Adjust the text color */
+    text-align: center;
+    font-size: x-large;
+    background-size: cover; /* Make the background image cover the entire element */
+    background-position: center; /* Center the background image within the element */
+    background-repeat: no-repeat; 
+}
+#services h2 {
+    /* position:absolute; */
+    width: 100%;
+    color:white;
+    background-color: transparent;
+    /*background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px; /* Adjust as needed */
+}
+
+
+/* Assuming you have background images for each service */
+
+
+.service:nth-child(1) { background-image: url('../images/543188.jpg'); }
+.service:nth-child(2) { background-image: url('../images/655888.jpg'); }
+.service:nth-child(3) { background-image: url('../images/842657.jpg'); }
+.service:nth-child(4) { background-image: url('../images/2087012.jpg'); }
+.service:nth-child(4) { background-image: url('../images/remedie.png'); }
+
+/* Style for the overlay text */
+.service::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and opacity */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+button[type=submit] {
+    align-self: flex-end;
+}
+
+footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 0px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+img {
+    max-width: 100%; /* Make the image as wide as its container */
+    height: auto; /* Maintain the aspect ratio of the image */
+}
+/* First Section */
+#intro {
+    position: relative;
+    /* Assuming you have a background image for the intro section */
+    background-image: url('../images/home.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff; /* Text color, adjust as needed */
+    text-align: center;
+    padding: 70px 350px; /* Adjust as needed */
+}
+
+#intro h2,
+#intro p {
+    /* position:absolute; */
+    width: 90%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px; /* Adjust as needed */
+}
+
+#intro h2 {
+    
+    font-size: 4em; /* Adjust as needed */
+}
+
+#intro p {
+    font-size: 1.5em;
+}
+
+
+/* About Us Section */
+.round-image {
+    border-radius: 50%; /* Make the image round */
+    width: 150px; /* Adjust as needed */
+    height: 150px; /* Adjust as needed */
+}

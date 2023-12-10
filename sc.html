@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Care - First Aid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('images/images.png'); /* Replace 'path_to_your_background_image.jpg' with the actual image path */
+            background-size: cover; /* This will cover the entire background */
+            background-attachment: fixed; /* This keeps the background fixed even when scrolling */
+        }
+       
+         #logo-container {
+            display: flex;
+            align-items: left;
+            justify-content: left;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        #logo {
+            width: 200px; /* Adjust the size of your logo image */
+            height: 200px; /* Adjust the size of your logo image */
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .collapsible {
+            background-color: #f1f1f1;
+            cursor: pointer;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .content-panel {
+            display: none;
+}
+       
+    </style>
+</head>
+<body>
+    <div id="logo-container">
+        <img id="logo" src="images/selff.png" alt="Self-Care Logo">
+       
+    </div>
+   
+    <div class="content">
+        <h2>Self-Care Information</h2>
+        <p>On this page, you will find valuable information about self-care in various emergency situations. Proper self-care can make a difference in an emergency. Here are some self-care tips:</p>
+        <ul>
+            <!-- Other self-care tips -->
+        </ul>
+       
+        <div class="collapsible" onclick="toggleContent('personalHygienePanel')">Maintain Personal Hygiene</div>
+        <div class="content-panel" id="personalHygienePanel">
+            <p>Proper personal hygiene is essential in preventing illness and maintaining health. Here are some tips:</p>
+            <ul>
+                <li>Wash your hands regularly with soap and water.</li>
+                <li>Shower or bathe daily.</li>
+                <li>Brush and floss your teeth at least twice a day.</li>
+            </ul>
+            <img src="images/maintain1.png" alt="Personal Hygiene Image">
+            <img src="images/maintain2.png" alt="Personal Hygiene Image">
+
+        </div>
+        <div class="collapsible" onclick="toggleContent('stay hydrated')">stay hydrated</div>
+        <div class="content-panel" id="stay hydrated">
+ 
+        <p>Dehydration can lead to fatigue and reduced productivity. Keep a water bottle on your desk and drink water regularly.Here are some tips:</p>
+            <ul>
+                <li>Drink a glass of water first thing in the morning.</li>
+                <li>Swap high sugar drinks for sparkling water or seltzer.</li>
+                <li> Don’t wait till you’re thirsty to drink.</li>
+            </ul>
+            <img src="images/hydrated.png" alt="stay hydrated">
+            <img src="images/hydrated2.png" alt="stay hydrated">
+
+        </div>
+        <div class="collapsible" onclick="toggleContent('drive safely')">drive safely</div>
+        <div class="content-panel" id="drive safely">
+ 
+        <p>Driving safely is essential to ensure your safety and the safety of others on the roads Here are some important tips for safe driving:</p>
+            <ul>
+                <li>Stay Within the Speed Limit.</li>
+                <li>Don't Drive Under the Influence.</li>
+                <li>Avoid Using Mobile Devices.</li>
+            </ul>
+            <img src="images/safee.png" alt="drive safely">
+            <img src="images/safety2.png" alt="drive safely">
+        </div>
+        <div class="collapsible" onclick="toggleContent('Enough sleep')">Enough sleep</div>
+        <div class="content-panel" id="Enough sleep">
+ 
+        <p>Getting enough sleep is essential for physical and mental well-being, allowing your body to rest, recover, and function optimally Here are some important tips for enough sleep:</p>
+            <ul>
+                <li>Consistent Sleep Schedule.</li>
+                <li>Limit Screen Time.</li>
+                <li>Comfortable Sleep Environment.</li>
+            </ul>
+            <img src="images/sleep1.png" alt="Enough sleep">
+            <img src="images/sleep2.png" alt="Enough sleep">
+        </div>
+         <div class="collapsible" onclick="toggleContent('checkups')">Regular checkups</div>
+        <div class="content-panel" id="checkups">
+ 
+        <p>Regular checkups involve routine medical examinations and screenings to monitor and maintain your overall health and detect potential issues early.:</p>
+            <ul>
+                <li>Choose a Primary Care Physician.</li>
+                <li>Set a Reminder.</li>
+                <li>Maintain Health Records.</li>
+            </ul>
+             <img src="images/regular1.png" alt="checkups">
+            <img src="images/regular2.png" alt="checkups">
+        </div>
+         <div class="collapsible" onclick="toggleContent('healthy life')">healthy life</div>
+        <div class="content-panel" id="healthy life">
+ 
+        <p> Leading a healthy life involves adopting various positive habits that promote physical, mental, and emotional well-being. Here are some tips for a healthy life:</p>
+            <ul>
+                <li>Balanced Diet: Eat a well-balanced diet rich in fruits, vegetables, whole grains, lean proteins, and healthy fats..</li>
+                <li>Stress Management: Practice stress-reduction techniques like meditation, deep breathing, or yoga.</li>
+                <li>Limit Alcohol and Avoid Smoking: Consume alcohol in moderation or avoid it altogether, and never smoke or quit if you do..</li>
+            </ul>
+            <img src="images/healthy1.png" alt="healthy life">
+            <img src="images/healthy2.png" alt="healthy life">
+        </div>
+        <!-- Repeat the above pattern for other buttons -->
+       
+        <div class="collapsible" onclick="toggleContent('vaccinationsPanel')">Stay Up to Date on Vaccinations</div>
+        <div class="content-panel" id="vaccinationsPanel">
+            <p>Vaccinations are crucial for preventing certain diseases. Ensure you:</p>
+            <ul>
+                <li>Keep a record of your vaccination history.</li>
+                <li>Stay updated on recommended vaccines for your age and region.</li>
+            </ul>
+            <img src="images/stay_4up1.png" alt="vaccinationsPanel">
+            <img src="images/stay_up2.png" alt="vaccinationsPanel">
+        </div>
+       
+    </div>
+
+
+    <script>
+        function toggleContent(panelId) {
+            var panel = document.getElementById(panelId);
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

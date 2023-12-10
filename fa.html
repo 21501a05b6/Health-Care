@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Care - First Aid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('images/images.png'); /* Replace 'path_to_your_background_image.jpg' with the actual image path */
+            background-size: cover; /* This will cover the entire background */
+            background-attachment: fixed; /* This keeps the background fixed even when scrolling */
+        }
+       
+         #logo-container {
+            display: flex;
+            align-items: left;
+            justify-content: left;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        #logo {
+            width: 200px; /* Adjust the size of your logo image */
+            height: 200px; /* Adjust the size of your logo image */
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .collapsible {
+            background-color: #f1f1f1;
+            cursor: pointer;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .content-panel {
+            display: none;
+}
+       
+    </style>
+</head>
+<body>
+    <div id="logo-container">
+        <img id="logo" src="images/firstaid.png" alt="Self-Care Logo">
+       
+    </div>
+   
+    <div class="content">
+        <h2>First-Aid Information</h2>
+        <p>On this page, you will find valuable information about first-Aid in various emergency situations. Proper precautions can make a easy path in an emergency. Here are some first-aid tips:</p>
+        <ul>
+            <!-- Other self-care tips -->
+        </ul>
+       
+        <div class="collapsible" onclick="toggleContent('Cuts and Scrapes')">Cuts and Scrapes</div>
+        <div class="content-panel" id="Cuts and Scrapes">
+            <p>Scrapes, unlike cuts, are not deep wounds, but they're still painful because they can cover a large, sensitive area of skin. Here are some tips:</p>
+            <ul>
+                <li>Wash your hands before handling the wound.</li>
+                <li>Clean the wound gently with cool, clean water and mild soap.</li>
+                <li>Apply an over-the-counter antiseptic ointment to help prevent infection.</li>
+                <li>Cover the wound with a clean bandage or sterile gauze to keep it clean.</li>
+            </ul>
+            <img src="images/cut1.png" alt="Cuts and Scrapes">
+            <img src="images/cuts1.png" alt="Cuts and Scrapes">
+
+        </div>
+        <div class="collapsible" onclick="toggleContent('Burns')">Burns</div>
+        <div class="content-panel" id="Burns">
+ 
+        <p>burn affects both the epidermis and the second layer of skin (dermis).Here are some tips:</p>
+            <ul>
+                <li>For minor burns, immediately hold the burn under cool (not cold) running water for about 10-15 minutes to help alleviate pain and prevent further damage.</li>
+                <li>Avoid using ice on burns as it can cause more damage.</li>
+                <li>Cover the burn with a sterile non-stick bandage or clean cloth.</li>
+                <li>Over-the-counter pain relievers like ibuprofen or acetaminophen can help manage pain.</li>
+            </ul>
+            <img src="images/burns1.png" alt="Burns">
+            <img src="images/burns2.png" alt="Burns">
+
+         </div>
+         <div class="collapsible" onclick="toggleContent('Sprains and Strains')">Sprains and Strains</div>
+        <div class="content-panel" id="Sprains and Strains">
+ 
+        <p>Symptoms include pain, swelling, bruising, and being unable to move your joint. Here are some tips:</p>
+            <ul>
+                <li>Rest the injured area to prevent further damage.</li>
+                <li>Apply ice wrapped in a cloth for 15-20 minutes every 1-2 hours during the first 48 hours.</li>
+                <li>Compress the area with an elastic bandage to reduce swelling.</li>
+                <li>Elevate the injured limb if possible to reduce swelling.</li>
+            </ul>
+            <img src="images/sprain1.png" alt="Sprains and Strains">
+            <img src="images/Sprain2.png" alt="Sprains and Strains">
+        </div>
+        <div class="collapsible" onclick="toggleContent(' Poisoning')"> Poisoning</div>
+        <div class="content-panel" id=" Poisoning">
+ 
+        <p>The symptoms caused by poisoning depend on the poison, the amount taken, and the age and underlying health of the person who takes it.</p>
+            <ul>
+                <li>Call emergency services immediately if someone is poisoned.</li>
+                <li>Do not try to induce vomiting unless advised by a medical professional.</li>
+                <li>Provide information about the substance ingested.</li>
+            </ul>
+            <img src="images/poison1.png" alt="Enough sleep">
+            <img src="images/poision2.png" alt="Enough sleep">
+        </div>
+         <div class="collapsible" onclick="toggleContent('Nosebleeds')">Nosebleeds</div>
+        <div class="content-panel" id="Nosebleeds">
+ 
+        <p>Epistaxis” is the medical term for a nosebleed, which is a loss of blood from the tissue that lines the inside of your nose</p>
+            <ul>
+                <li>Have the person sit down and lean forward slightly.</li>
+                <li>Pinch the nostrils together just below the bony part of the nose.</li>
+                <li>Maintain pressure for about 10-15 minutes.</li>
+                <li>Avoid tilting the head back, as this can cause blood to flow down the throat.</li>
+            </ul>
+             <img src="images/nose1.png" alt="Nosebleeds">
+            <img src="images/nose2.png" alt="Nosebleeds">
+        </div>
+         <div class="collapsible" onclick="toggleContent('Minor Allergic Reactions')">Minor Allergic Reactions</div>
+        <div class="content-panel" id="Minor Allergic Reactions">
+ 
+        <p>Mild reaction​​ Symptoms of a mild allergic reaction can include: hives, or itchy red spots on the skin. rash.</p>
+            <ul>
+                <li>If you suspect an allergic reaction, take an over-the-counter antihistamine (if not allergic to it).</li>
+                <li>If there's difficulty breathing or a severe reaction, seek medical attention immediately.</li>
+            </ul>
+            <img src="images/minor_allergic2.png" alt="Minor Allergic Reactions">
+            <img src="images/minor_allergic1.png" alt="Minor Allergic Reactions">
+        </div>
+        <!-- Repeat the above pattern for other buttons -->
+       
+        <div class="collapsible" onclick="toggleContent('Insect Bites and Stings')">Insect Bites and Stings</div>
+        <div class="content-panel" id="Insect Bites and Stings">
+            <p>Flea bites can be grouped in lines or clusters. If you're particularly ... A few people have severe reactions to the toxin injected by the insect or spider.</p>
+            <ul>
+                <li>Remove the stinger if present by gently scraping it with a flat object.</li>
+                <li>Wash the area with soap and water.</li>
+                <li>Apply a cold compress to reduce swelling and itching.</li>
+                <li>Over-the-counter antihistamine creams or oral antihistamines can help with itching</li>
+            </ul>
+            <img src="images/insect_bite1.png"alt="Insect Bites and Stings">
+            <img src="images/insect_bitee2.png" alt="Insect Bites and Stings">
+        </div>
+       
+    </div>
+
+
+    <script>
+        function toggleContent(panelId) {
+            var panel = document.getElementById(panelId);
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
